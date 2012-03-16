@@ -4,3 +4,9 @@
 *.swp
 # 忽略所有Python字节码文件
 *.pyc
+
+*.wsgic
+
+*config.py
+sae/2/
+sae/3/
