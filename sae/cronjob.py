@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 # coding=utf-8
+import urllib2
+
 from weibo1 import APIClient, OAuthToken
 
 from framework import cache
@@ -25,8 +27,12 @@ class cronjob():
             for i in reversed(rts): 
                 if i.user.id == 1468317623:
                     continue
-                self.parse_rt(i)
-                return True # 每次循环只转发一次就好了
+                
+                try:
+                    self.parse_rt(i)
+                    return True # 每次循环只转发一次就好了
+                except urllib2.HTTPError:
+                    continue
             return False
         
     def get_new_rts(self, rt_since_id):
