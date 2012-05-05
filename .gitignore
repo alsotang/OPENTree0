@@ -8,3 +8,5 @@
 *.wsgic
 
 sae/config.py
+sae/log
+sae/test.py

@@ -1,9 +1,10 @@
 name: opentree0
 version: 1
 
-#cron:
-#- url: /backend/cronjob
-#  schedule: */2 * * * *
-#
-#handle:
-#- hostaccess: if(path ~ "/backend/") allow "10.0.0.0/8"
+cron:
+  - description: auto retweet
+    url: /backend/cronjob
+    schedule: every 1 mins
+
+handle:
+  - hostaccess: if(path ~ "/backend/") allow "10.0.0.0/8"

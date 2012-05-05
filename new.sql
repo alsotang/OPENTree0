@@ -4,12 +4,12 @@
 
 CREATE TABLE IF NOT EXISTS `account_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` varchar(15) NOT NULL,
+  `user_id` varchar(32) NOT NULL,
   `oauth_token` varchar(32) NOT NULL,
-  `oauth_token_secret` varchar(6) NOT NULL,
+  `oauth_token_secret` varchar(32) NOT NULL,
   `join_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `total_tweets` int(10) unsigned NOT NULL DEFAULT '0',
-  `rt_since_id` varchar(15) NOT NULL,
+  `rt_since_id` varchar(32) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
