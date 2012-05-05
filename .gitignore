@@ -1,5 +1,5 @@
 # 忽略所有.svn文件夹
-*.svn/
+#*.svn/
 # 忽略所有.swp文件
 *.swp
 # 忽略所有Python字节码文件
@@ -7,6 +7,4 @@
 
 *.wsgic
 
-*config.py
-sae/2/
-sae/3/
+sae/config.py
